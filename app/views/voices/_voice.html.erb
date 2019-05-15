@@ -1,0 +1,26 @@
+<div class="comment">
+
+  <div class="comment-textarea">
+    <div class="comment-textarea-nickname">
+      <%= simple_format(voice.user.nickname) %>
+    </div>
+    <div class="comment-textarea-text">
+      <%= simple_format(voice.comment) %>
+    </div>
+  </div>
+
+  <div class="comment-buttons">
+  <% if user_signed_in? && voice.user_id == current_user.id %>
+    <div class="comment-buttons-edit-userok">
+      <%= link_to "Edit", "/voices/#{voice.id}/edit", method: :get %>
+    </div>
+    <div class="comment-buttons-delete-userok">
+      <%= link_to "Delete", "/voices/#{voice.id}", method: :delete %>
+    </div>
+  <%else%>
+    <div class="comment-buttons-edit-userng">Edit</div>
+    <div class="comment-buttons-delete-userng">Delete</div>  
+  <%end%>
+  </div>
+
+</div>

@@ -1,0 +1,13 @@
+<div class="edit-page">
+  <h1 class="edit-page-title">編集画面</h1>
+
+  <%= form_for (@voice) do |f|%>
+    <div class="edit-page-comment">
+      <%= f.text_area :comment, placeholder: 'コメントを書いてね！（長い文章は改行しよう）', style: 'width: 50%;height: 100px;' %>
+    </div>
+    <div class="edit-page-submit">
+      <%= f.submit type: "submit" %>
+    </div>
+  <%end%>
+  
+</div>

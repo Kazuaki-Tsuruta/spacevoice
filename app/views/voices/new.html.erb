@@ -1,0 +1,14 @@
+
+<div class="new-page">
+  <h1 class="new-page-title">投稿画面</h1>
+
+  <%= form_for (@voice) do |f|%>
+    <div class="new-page-comment">
+      <%= f.text_area :comment, placeholder: 'コメントを書いてね！（長い文章は改行しよう）', style: 'width: 50%;height: 100px;' %>
+    </div>
+    <div class="new-page-submit">
+      <%= f.submit type: "submit" %>
+    </div>
+  <%end%>
+  
+</div>
